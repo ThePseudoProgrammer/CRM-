@@ -1,0 +1,273 @@
+@font-face {
+    font-family: 'Open Sans';
+    src: url('fonts/OpenSans-Regular.woff2') format('woff2'),
+        url('fonts/OpenSans-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('fonts/OpenSans-SemiBold.woff2') format('woff2'),
+        url('fonts/OpenSans-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('fonts/OpenSans-Bold.woff2') format('woff2'),
+        url('fonts/OpenSans-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    color: #333;
+    font-size: 14px;
+    background-color: #F5F5F5;
+}
+
+table {
+    border-spacing: 0;
+}
+
+input:focus {
+    outline: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1406px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* h1 {
+    text-align: center;
+} */
+
+.header {
+    margin-bottom: 40px;
+    padding: 20px 0;
+    background-color: #FFF;
+    box-shadow: 0px 9.03012px 27.0904px rgba(176, 190, 197, 0.32), 0px 3.38629px 5.64383px rgba(176, 190, 197, 0.32);
+}
+
+.header__container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.title-h1 {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 32.68px;
+    text-align: left;
+}
+
+.search-input {
+    width: 42.5%;
+    padding: 13px 16px;
+    border: 1px solid rgba(51, 51, 51, 0.2);
+}
+
+.main {
+    display: block;
+}
+
+.sort-icon {
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+.sort-icon.asc::after {
+    content: ' ↑';
+}
+
+.sort-icon.desc::after {
+    content: ' ↓';
+}
+
+.main__container {
+    padding: 0 10px;
+    max-width: 1246px;
+}
+
+.main__title {
+    margin-bottom: 10px;
+    font-size: 24px;
+    padding: 0 10px;
+    line-height: 33px;
+    font-weight: bold;
+}
+
+.table-container {
+    margin-bottom: 40px;
+    padding: 0 10px;
+    overflow-x: auto;
+}
+
+
+.main__button-container {
+    text-align: center;
+}
+
+.table {
+    min-width: 728px;
+    width: 100%;
+    max-width: 1186px;
+}
+
+.table__body {
+    background-color: #FFF;
+} 
+
+.table-body {
+
+}
+
+.table-row__elem {
+    height: 60px;
+    padding: 0 7px;
+    vertical-align: middle;
+    border-bottom: 1px solid rgba(200, 197, 209, .5);
+}
+
+.table-row__elem_id {
+    padding-left: 20px;
+    font-size: 12px;
+    line-height: 16px;
+    color: #B0B0B0;
+}
+
+.main__button {
+    padding: 12px;
+    padding-left: 16px;
+    padding-right: 16px;
+    font-weight: 600;
+    color: #333;
+    border: 1px solid #333;
+    background-repeat: no-repeat;
+    background-position: 20px center;
+}
+
+button {
+    margin: 10px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+#clientsTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#clientsTable th,
+#clientsTable td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+#clientsTable th {
+    background-color: #f2f2f2;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: white;
+    margin: 15% auto;
+    padding: 20px;
+    width: 50%;
+}
+
+.close-btn {
+    font-size: 30px;
+    color: #aaa;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    color: black;
+}
+
+.contact-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    position: relative;
+}
+
+.contact-item i {
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+.contact-item span {
+    font-size: 14px;
+}
+
+.contact-item:hover::after {
+    content: attr(data-type) ": " attr(data-value);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    padding: 5px;
+    background-color: #333;
+    color: white;
+    border-radius: 3px;
+    font-size: 12px;
+    white-space: nowrap;
+    z-index: 10;
+    margin-top: 5px;
+}
+
+/* модальное окно */
+
+.modal__title {
+    margin-bottom: 30px;
+    padding: 0 30px;
+    font-size: 18px;
+    line-height: 25px;
+}
+
+.modal__form {
+    display: flex;
+    flex-direction: column;
+}
+
+.modal__input-container {
+    margin-bottom: 20px;
+}
